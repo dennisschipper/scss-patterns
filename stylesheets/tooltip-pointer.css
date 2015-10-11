@@ -35,7 +35,7 @@
       border-right: 3px solid #24a780;
       left: -6px;
       top: 12px; }
-  /* line 97, /Users/dennis/Projects/scss-patterns/source/stylesheets/tooltip-pointer.scss */
+  /* line 94, /Users/dennis/Projects/scss-patterns/source/stylesheets/tooltip-pointer.scss */
   .tooltip-pointer-container.right {
     position: relative; }
     /* line 4, /Users/dennis/Projects/scss-patterns/source/stylesheets/tooltip-pointer.scss */
@@ -51,7 +51,7 @@
       border-left: 3px solid #24a780;
       right: -6px;
       top: 12px; }
-  /* line 101, /Users/dennis/Projects/scss-patterns/source/stylesheets/tooltip-pointer.scss */
+  /* line 95, /Users/dennis/Projects/scss-patterns/source/stylesheets/tooltip-pointer.scss */
   .tooltip-pointer-container.top {
     position: relative; }
     /* line 4, /Users/dennis/Projects/scss-patterns/source/stylesheets/tooltip-pointer.scss */
@@ -68,7 +68,7 @@
       top: -6px;
       left: 50%;
       margin-left: -3px; }
-  /* line 105, /Users/dennis/Projects/scss-patterns/source/stylesheets/tooltip-pointer.scss */
+  /* line 96, /Users/dennis/Projects/scss-patterns/source/stylesheets/tooltip-pointer.scss */
   .tooltip-pointer-container.bottom {
     position: relative; }
     /* line 4, /Users/dennis/Projects/scss-patterns/source/stylesheets/tooltip-pointer.scss */

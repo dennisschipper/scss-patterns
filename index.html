@@ -7,12 +7,14 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title></title>
 
-    <link href="/stylesheets/normalize.css" rel="stylesheet" /><link href="/stylesheets/all.css" rel="stylesheet" />
+    <link href="/stylesheets/normalize.css" rel="stylesheet" /><link href="/stylesheets/all.css" rel="stylesheet" /><link href="/stylesheets/prism.css" rel="stylesheet" />
     <script src="/javascripts/all.js"></script>
   </head>
 
   <body class="index">
     
+
+
 
 
 
@@ -129,30 +131,53 @@
   height: 100px;
   background: #24a780;
 
-  &.left {
-    @include add-corner(3px, #24a780, 12px, left, "");
-  }
+  &.left { @include add-corner(3px, #24a780, 12px, left, ""); }
+  &.right { @include add-corner(3px, #24a780, 12px, right, ""); }
+  &.top { @include add-corner(3px, #24a780, "middle", top, ""); }
+  &.bottom { @include add-corner(3px, #24a780, "middle", bottom, ""); }
+}
+</code></pre>
+</div>
 
-  &.right {
-    @include add-corner(3px, #24a780, 12px, right, "");
-  }
 
-  &.top {
-    @include add-corner(3px, #24a780, "middle", top, "");
-  }
 
-  &.bottom {
-    @include add-corner(3px, #24a780, "middle", bottom, "");
+
+
+<div class="scss-sample sample-flat-lists">
+  <h1>Lists</h1>
+  <div class="sample-visual">
+    <ul class="inline-list">
+  <li>List Item 1</li>
+  <li>List Item 2</li>
+  <li>List Item 3</li>
+</ul>
+
+  </div>
+
+
+  <h2>Html</h2>
+  <pre><code class="language-html"><script type="prism-html-markup"><ul class="inline-list">
+  <li>List Item 1</li>
+  <li>List Item 2</li>
+  <li>List Item 3</li>
+</ul>
+</script></code></pre>
+
+  <pre><code class="language-css">@mixin flat-list($inline) {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @if $inline == "inline" {
+    li { display: inline-block; }
+  }
+  @else {
+    li { display: block; }
   }
 }
 </code></pre>
-
-
-
-
-
-
-
 
 </div>
 
