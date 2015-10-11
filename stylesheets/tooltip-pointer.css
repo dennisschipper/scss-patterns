@@ -1,0 +1,35 @@
+/* line 55, /Users/dennis/Projects/scss-patterns/source/stylesheets/tooltip-pointer.scss */
+.tooltip-pointer-container {
+  position: relative;
+  position: relative;
+  margin: 100px;
+  width: 100px;
+  height: 100px;
+  background: #24a780; }
+  /* line 6, /Users/dennis/Projects/scss-patterns/source/stylesheets/tooltip-pointer.scss */
+  .tooltip-pointer-container:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border: 3px solid transparent;
+    margin-left: -3px;
+    border-left: 3px solid #24a780;
+    right: -6px;
+    top: 6px; }
+  /* line 65, /Users/dennis/Projects/scss-patterns/source/stylesheets/tooltip-pointer.scss */
+  .tooltip-pointer-container.left {
+    position: relative; }
+    /* line 6, /Users/dennis/Projects/scss-patterns/source/stylesheets/tooltip-pointer.scss */
+    .tooltip-pointer-container.left:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0px;
+      height: 0px;
+      border: 3px solid transparent;
+      margin-left: -3px;
+      border-right: 3px solid #24a780;
+      left: -3px;
+      top: 6px; }

@@ -1,0 +1,96 @@
+/* line 1, /Users/dennis/Projects/scss-patterns/source/stylesheets/all.scss */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "proxima nova";
+  font-size: 15px;
+  color: #333; }
+
+/* line 9, /Users/dennis/Projects/scss-patterns/source/stylesheets/all.scss */
+h1, h2, h3 {
+  font-size: 1.2em;
+  font-weight: normal;
+  padding: 0;
+  margin: 0; }
+
+/* line 17, /Users/dennis/Projects/scss-patterns/source/stylesheets/all.scss */
+.scss-sample {
+  background: #eef2f4;
+  padding: 50px; }
+
+/* line 55, /Users/dennis/Projects/scss-patterns/source/stylesheets/tooltip-pointer.scss */
+.tooltip-pointer-container {
+  position: relative;
+  position: relative;
+  margin: 100px;
+  width: 100px;
+  height: 100px;
+  background: #24a780; }
+  /* line 6, /Users/dennis/Projects/scss-patterns/source/stylesheets/tooltip-pointer.scss */
+  .tooltip-pointer-container:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border: 3px solid transparent;
+    margin-left: -3px;
+    border-left: 3px solid #24a780;
+    right: -6px;
+    top: 6px; }
+  /* line 65, /Users/dennis/Projects/scss-patterns/source/stylesheets/tooltip-pointer.scss */
+  .tooltip-pointer-container.left {
+    position: relative; }
+    /* line 6, /Users/dennis/Projects/scss-patterns/source/stylesheets/tooltip-pointer.scss */
+    .tooltip-pointer-container.left:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0px;
+      height: 0px;
+      border: 3px solid transparent;
+      margin-left: -3px;
+      border-right: 3px solid #24a780;
+      left: -3px;
+      top: 6px; }
+
+/* line 31, /Users/dennis/Projects/scss-patterns/source/stylesheets/all.scss */
+.tooltip-pointer {
+  position: relative; }
+  /* line 6, /Users/dennis/Projects/scss-patterns/source/stylesheets/tooltip-pointer.scss */
+  .tooltip-pointer:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border: 80px solid transparent;
+    margin-left: -80px;
+    border-right: 80px solid #62ad8c;
+    left: -80px;
+    top: 15px; }
+  /* line 45, /Users/dennis/Projects/scss-patterns/source/stylesheets/tooltip-pointer.scss */
+  .tooltip-pointer:hover:before {
+    border-right-color: nohover; }
+
+/* line 35, /Users/dennis/Projects/scss-patterns/source/stylesheets/all.scss */
+ul.list {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  /* line 12, /Users/dennis/Projects/scss-patterns/source/stylesheets/partials/_lists.scss */
+  ul.list li {
+    display: block; }
+
+/* line 39, /Users/dennis/Projects/scss-patterns/source/stylesheets/all.scss */
+ul.inline-list {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  /* line 9, /Users/dennis/Projects/scss-patterns/source/stylesheets/partials/_lists.scss */
+  ul.inline-list li {
+    display: inline-block; }
