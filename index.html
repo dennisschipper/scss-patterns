@@ -7,27 +7,153 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title></title>
 
-    <link href="/stylesheets/normalize.css" rel="stylesheet" /><link href="/stylesheets/all.css" rel="stylesheet" /><link href="/stylesheets/prism.css" rel="stylesheet" />
+    <link href="/stylesheets/normalize.css" rel="stylesheet" /><link href="/stylesheets/all.css" rel="stylesheet" />
     <script src="/javascripts/all.js"></script>
   </head>
 
   <body class="index">
-    <div class="scss-sample sample-tooltip-pointers">
-  <h1>Container Pointers</h1>
-  <div class="tooltip-pointer-container"></div>
-  <div class="tooltip-pointer-container left"></div>
+    
 
-  <pre>
-    <code class="language-css">
-      body {
-        padding: 0;
-        margin: 0;
-        font-family: "proxima nova";
-        font-size: 15px;
-        color: #333;
+
+
+
+
+
+
+<div class="scss-sample sample-tooltip-pointers">
+  <h1>Container Pointers</h1>
+
+  <div class="tooltip-pointer-container left"></div>
+<div class="tooltip-pointer-container right"></div>
+<div class="tooltip-pointer-container top"></div>
+<div class="tooltip-pointer-container bottom"></div>
+
+
+  <h2>Html</h2>
+  <pre><code class="language-html"><script type="prism-html-markup"><div class="tooltip-pointer-container left"></div>
+<div class="tooltip-pointer-container right"></div>
+<div class="tooltip-pointer-container top"></div>
+<div class="tooltip-pointer-container bottom"></div>
+</script></code></pre>
+
+  <h2>Scss</h2>
+  <pre><code class="language-css">@mixin add-corner($border-size, $border-color, $position, $direction, $hover:"") {
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border: $border-size solid rgba(0, 0, 0, 0.0);
+    top: initial;
+    bottom: initial;
+
+    @if $direction == "left" {
+      border-right: $border-size solid $border-color;
+      left: $border-size * -2;
+
+      @if $position == "middle" {
+        top: 50%;
+        margin-top: $border-size * -1;
       }
-    </code>
-  </pre>
+      @else {
+        top: $position;
+      }
+    }
+
+
+
+    @if $direction == "right" {
+      border-left: $border-size solid $border-color;
+      right: $border-size * -2;
+
+      @if $position == "middle" {
+        top: 50%;
+        margin-top: $border-size * -1;
+      }
+      @else {
+        top: $position;
+      }
+    }
+
+    @if $direction == "top" {
+      border-bottom: $border-size solid $border-color;
+      top: $border-size * -2;
+
+      @if $position == "middle" {
+        left: 50%;
+        margin-left: $border-size * -1;
+      }
+      @else {
+        left: $position;
+      }
+    }
+
+    @if $direction == "bottom" {
+      border-top: $border-size solid $border-color;
+      bottom: $border-size * -2;
+
+      @if $position == "middle" {
+        left: 50%;
+        margin-left: $border-size * -1;
+      }
+      @else {
+        left: $position;
+      }
+    }
+  }
+
+  // Sometimes we need a mouse hover color
+  @if $hover == "" { }
+  @else {
+    &:hover {
+      &:before {
+        @if $direction == "top" { border-bottom-color: $hover; }
+        @else if $direction == "bottom" { border-top-color: $hover; }
+        @else if $direction == "left" { border-right-color: $hover; }
+        @else if $direction == "right" { border-left-color: $hover; }
+      }
+    }
+  }
+}
+
+.tooltip-pointer-container {
+  position: relative;
+  @include add-corner(3px, #24a780, 6px, right, "");
+
+  // For presentation
+  margin: 100px;
+  width: 100px;
+  height: 100px;
+  background: #24a780;
+
+  &.left {
+    @include add-corner(3px, #24a780, 12px, left, "");
+  }
+
+  &.right {
+    @include add-corner(3px, #24a780, 12px, right, "");
+  }
+
+  &.top {
+    @include add-corner(3px, #24a780, "middle", top, "");
+  }
+
+  &.bottom {
+    @include add-corner(3px, #24a780, "middle", bottom, "");
+  }
+}
+</code></pre>
+
+
+
+
+
+
+
+
 </div>
 
   </body>
